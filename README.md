@@ -3,7 +3,6 @@
 
 - [Introduction](#Introduction)
 - [Setup](#Setup)
-- [Features](#features)
 - [Built with](#Built-with)
 - [License](#License)
 
@@ -26,3 +25,14 @@ npm start
 ```
 
 You can access the app at  ```127.0.0.1:4000```
+
+## :wrench: Built with
+
+- [graphql-yoga](https://www.npmjs.com/package/graphql-yoga)
+- [Mongo DB](https://www.mongodb.com/cloud/atlas)
+
+## :page_facing_up: License
+
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/LauraRgz/Recetario/blob/master/LICENSE.md) file for details
+
+**[Back to top](#Table-of-contents)**
