@@ -9,6 +9,16 @@ const User = {
 
     const result = await collectionPosts.find({ author: authorID }).toArray();
     return result;
+  },
+  authorType:  async (parent, args, ctx, info) => {
+    const type = parent.authorType;
+    if(type === 0){
+      return "Author";
+    }
+
+    if (type === 1){
+      return "Reader";
+    }
   }
 };
 export { User as default };

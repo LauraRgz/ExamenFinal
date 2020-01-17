@@ -9,7 +9,7 @@ const Mutation = {
     const collection = db.collection("authors");
 
     const notOk = await collection.findOne({ mail });
-    if (!notOk) {
+    if (!notOk && (authorType === 0 || authorType === 1)) {
       const token = null;
       const result = await collection.insertOne({
         mail,
@@ -19,7 +19,7 @@ const Mutation = {
       });
       return result.ops[0];
     } else {
-      return new Error("Mail already in use");
+      return new Error("Mail already in use or incorrect type");
     }
   },
   login: async (parent, args, ctx, info) => {
