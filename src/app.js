@@ -3,10 +3,10 @@ import { GraphQLServer, PubSub } from "graphql-yoga"; //npm install graphql-yoga
 
 import "babel-polyfill"; //npm install babel-polyfill
 import Query from "./resolvers/Query";
-// import Mutation from './resolvers/Mutation';
-// import Author from './resolvers/Author';
-// import Post from './resolvers/Post';
-// import Subscription from './resolvers/Subscription'
+import Mutation from './resolvers/Mutation';
+import User from './resolvers/Author';
+import Post from './resolvers/Post';
+import Subscription from './resolvers/Subscription'
 
 const usr = "Laura";
 const pwd = "Pabl11";
@@ -34,6 +34,10 @@ const connectToDb = async function(usr, pwd, url) {
 const runGraphQLServer = function(context) {
   const resolvers = {
     Query,
+    Mutation,
+    Subscription,
+    User,
+    Post
     
   };
 

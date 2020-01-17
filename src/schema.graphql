@@ -1,3 +1,37 @@
+type User {
+    _id: ID!
+    mail: String!
+    password: String!
+    token: String
+    authorType: Int!
+    posts: [Post!]
+}
+
+type Post {
+    _id: ID!
+    title: String!
+    description: String!
+    date: String!
+    author: User!
+}
+
+type Mutation {
+    addUser(mail: String!, password: String!, authorType: Int!): User
+    removeUser(authorID: ID!, token: String!): User!
+    login(mail: String!, password: String!): String!
+    logout(authorID: ID!, token: String!): User!
+
+    addPost(authorID: ID!, token: String!, title: String!, description: String!): Post!
+    deletePost(authorID: ID!, token: String!, postID: ID!): Post!
+
+}
+
+type Subscription {
+    newPostFromAuthor(id:ID!): Post!
+}
+
 type Query {
-    ok: String!
+    getPosts: [Post!]
+    getPost(postID: ID!): Post!
+    getPostsByAuthor(authorID: ID!): [Post!]
 }
