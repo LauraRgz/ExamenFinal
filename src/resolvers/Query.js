@@ -17,7 +17,7 @@ const Query = {
     const db = client.db("blog");
     const collection = db.collection("posts");
 
-    const result = await collection.findOne({_id: ObjectID(postID)});
+    const result = await collection.findOne({ _id: ObjectID(postID) });
     return result;
   },
 
@@ -28,14 +28,10 @@ const Query = {
     const db = client.db("blog");
     const collectionPosts = db.collection("posts");
 
-    const result = await collectionPosts.find({author: ObjectID(authorID)}).toArray();
-   
-    // const posts = await collection.find({}).toArray(); 
-
+    const result = await collectionPosts
+      .find({ author: ObjectID(authorID) })
+      .toArray();
     return result;
-    
-  },
-
-
+  }
 };
 export { Query as default };

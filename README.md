@@ -1,4 +1,5 @@
-#  :closed_book: ExamenFinal
+# :closed_book: ExamenFinal
+
 ## :memo: Table of contents
 
 - [Introduction](#Introduction)
@@ -6,7 +7,7 @@
 - [Built with](#Built-with)
 - [License](#License)
 
-##  :notebook: Introduction
+## :notebook: Introduction
 
 This blog is a Node-JS app developed to manage posts. It is possible to create, delete and update authors and post as well as subscribe to them.
 
@@ -24,7 +25,7 @@ npm install
 npm start
 ```
 
-You can access the app at  ```127.0.0.1:4000```
+You can access the app at `127.0.0.1:4000`
 
 ## :wrench: Built with
 

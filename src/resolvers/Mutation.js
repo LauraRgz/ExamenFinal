@@ -38,6 +38,11 @@ const Mutation = {
         { $set: { token: token } },
         { returnOriginal: false }
       );
+
+      setTimeout(() => {
+        collection.updateOne({ _id: ok._id }, { $set: { token: null } });
+      }, 1800000);
+
       return token;
     } else {
       return new Error("Error: Mail not found");
