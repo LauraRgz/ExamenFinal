@@ -1,4 +1,4 @@
-# ExamenFinal
+#  :closed_book: ExamenFinal
 ## :memo: Table of contents
 
 - [Introduction](#Introduction)
@@ -7,7 +7,7 @@
 - [Built with](#Built-with)
 - [License](#License)
 
-## Introduction
+##  :notebook: Introduction
 
 This blog is a Node-JS app developed to manage posts. It is possible to create, delete and update authors and post as well as subscribe to them.
 
